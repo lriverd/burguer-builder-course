@@ -5,6 +5,7 @@ import Slider from '@material-ui/core/Slider';
 
 
 const ingredientControl = (props) => {
+    const value = props.quantity;
 
     return (
         <div>
@@ -19,6 +20,8 @@ const ingredientControl = (props) => {
                 min={0}
                 max={5}
                 valueLabelDisplay="auto"
+                value={value}
+                //onChange={props.change(props.key, value)}
             />
         </div>
     );
