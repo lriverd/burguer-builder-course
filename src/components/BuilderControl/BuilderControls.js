@@ -6,21 +6,21 @@ import styles from './BuilderControl.module.css'
 
 const builderControls = (props) => {
 
-  const ingredientsControl = Object.keys(props.ingredients)
-    .map(igKey => {
-      return <IngredientControl
-        type={igKey}
-        key={igKey}
-        quantity={props.ingredients[igKey]}
-        change={props.changeIngs}/>
+	const ingredientsControl = Object.keys(props.ingredients)
+		.map(igKey => {
+			return <IngredientControl
+				type={igKey}
+				key={igKey}
+				quantity={props.ingredients[igKey]}
+				added={() => props.addIngredient(igKey)}/>
 
-    });
+		});
 
-  return (
-    <div className={styles.BuilderControls}>
-      {ingredientsControl}
-    </div>
-  );
+	return (
+		<div className={styles.BuilderControls}>
+			{ingredientsControl}
+		</div>
+	);
 }
 
 export default builderControls;
