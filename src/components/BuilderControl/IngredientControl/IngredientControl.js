@@ -15,7 +15,11 @@ const ingredientControl = (props) => {
 				<AddIcon/>
 			</IconButton>
 			{props.quantity}
-			<IconButton color="primary" aria-label="remove ingredient">
+			<IconButton 
+				color="primary" 
+				aria-label="remove ingredient"
+				onClick={props.removed}
+				disabled={props.disabled}>
 				<RemoveIcon/>
 			</IconButton>
 		</div>
