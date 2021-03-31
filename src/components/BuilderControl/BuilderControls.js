@@ -29,7 +29,8 @@ const builderControls = (props) => {
 		<div className={styles.BuilderControls}>
 			<p>Current Price  <strong>$ {props.price.toFixed(2)}</strong></p>
 			{ingredientsControl}
-			<button disabled={!props.purchaseable}>ORDER NOW</button>
+			<button disabled={!props.purchaseable}
+			onClick={props.ordered}>ORDER NOW</button>
 		</div>
 	);
 }
